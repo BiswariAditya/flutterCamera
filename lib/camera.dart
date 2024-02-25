@@ -11,7 +11,7 @@ class CameraPermission extends StatefulWidget {
 }
 
 class _CameraPermissionState extends State<CameraPermission> {
-  late File image;
+  File? image;
   final picker = ImagePicker();
 
   Future getImage() async {
@@ -42,7 +42,7 @@ class _CameraPermissionState extends State<CameraPermission> {
             else
               Column(
                 children: [
-                  Image.file(image),
+                  Image.file(image!),
                   ElevatedButton(
                     onPressed: () {
                       // Implement send functionality here
